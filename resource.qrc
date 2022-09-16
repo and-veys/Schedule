@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/main.qml</file>
+        <file>src/TextAreaName.qml</file>
+        <file>src/TextAreaDate.qml</file>
+        <file>src/ButtonSave.qml</file>
+        <file>src/ButtonPrint.qml</file>
+        <file>src/MyTextArea.qml</file>
+        <file>src/Caption.qml</file>
+        <file>src/MyButton.qml</file>
+    </qresource>
+</RCC>
