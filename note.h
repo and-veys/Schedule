@@ -18,6 +18,9 @@ private:
     QString name;
     QDate deadline;
     int progress;
+
+public:
+     QList<QString> getParamsString();
 };
 
 #endif // NOTE_H

@@ -25,8 +25,18 @@ QJsonObject Note::getJsonObject()
     return res;
 }
 
-QString Note::toString()
-{
+QString Note::toString(){
 
-   return deadline.toString("dd.MM.yyyy") + " '" + name + "', процесс: " + QString::number(progress);
+    QList<QString> params = getParamsString();
+    return params[1] + " '" + params[0] + "', процесс: " + params[2];
 }
+
+QList<QString> Note::getParamsString()
+{
+    QList<QString> res;
+    res.push_back(name);
+    res.push_back(deadline.toString("dd.MM.yyyy"));
+    res.push_back(QString::number(progress));
+    return res;
+}
+

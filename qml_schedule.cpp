@@ -12,10 +12,15 @@ QML_Schedule::QML_Schedule(QObject *parent) : QObject(parent)
     file_name = "data.json";
     readFile();
 }
+
+QML_Schedule::QML_Schedule(const QString & file, QObject *parent) : QObject(parent)
+{
+    file_name = file;
+    readFile();
+}
 QML_Schedule::~QML_Schedule()
 {
     writeFile();
-
 }
 
 void QML_Schedule::readFile()
@@ -44,9 +49,13 @@ void QML_Schedule::writeFile()
         file.close();
     }
 }
-QList<QString> QML_Schedule::getNote()
+
+QList<Note> * QML_Schedule::getListNotes()
 {
-    QJsonDocument doc;
+    return &notes;
+}
+QList<QString> QML_Schedule::getNotes()
+{
     QList<QString> res;
     for(int i=0; i<notes.size(); ++i)
         res.push_back(notes[i].toString());
