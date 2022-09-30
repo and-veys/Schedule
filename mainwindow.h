@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "nodesdialog.h"
+
 #include <QQuickWidget>
 #include <QMainWindow>
 
@@ -14,6 +16,12 @@ public:
 
 private:
     QQuickWidget * widget;
+    NodesDialog * dlg;
+
+private slots:
+    void printSchedule();
+    void saveNode (QString name, QVariant date, int progress);
+
 
 };
 #endif // MAINWINDOW_H

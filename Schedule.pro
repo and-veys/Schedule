@@ -2,6 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 QT += quickwidgets
+QT += sql
 
 CONFIG += c++11
 
@@ -19,11 +20,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    nodesdialog.cpp \
     note.cpp \
     qml_schedule.cpp
 
 HEADERS += \
     mainwindow.h \
+    nodesdialog.h \
     note.h \
     qml_schedule.h
 
@@ -36,3 +39,6 @@ RESOURCES += \
     resource.qrc
 
 DISTFILES +=
+
+FORMS += \
+    nodesdialog.ui

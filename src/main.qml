@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
-import MY.Schedule 1.0
+//import MY.Schedule 1.0
 
 Rectangle {
     color:          "lightgreen"
@@ -71,9 +71,9 @@ Rectangle {
             text:                   "Посмотреть все задания"
         }
     }
-    Schedule {
-        id:         schedule
-    }
+//    Schedule {
+//        id:         schedule
+//    }
 
 }
 
